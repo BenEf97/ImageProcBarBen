@@ -64,12 +64,11 @@ v=rand(10000,1)*255;
 v=uint8(v);
 vhist=imhist(v);
 vh=vhist/10000;
-cdf=cumsum(vh);
 PDFmean= mean(vh)
 PDFmin= min(vh)
 PDFmax= max(vh,[],1)
 PDFstd= std(vh)
 PDFmedian= median(vh)
-
+cdf=cumsum(vh);
 per5 = find(cdf>0.05,1)
 
