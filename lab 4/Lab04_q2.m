@@ -59,7 +59,7 @@ figure(3)
 montage({Frame,ORG_ALG_frame_avg})
 title('Average Frame after 16 interaction ORIGINAL ALGORITHM');
 
-figure(1);subplot(312);hist(Frame_Avrg(:),255); title(['AVG and TRNSFRM hist {\sigma} = ' num2str(std2)]); grid on;
+figure();subplot(312);hist(Frame_Avrg(:),255); title(['AVG and TRNSFRM hist {\sigma} = ' num2str(std2)]); grid on;
 subplot(313);hist(ORG_ALG_frame_avg(:),255); title(['ORIGINAL ALGORITHM hist {\sigma} = ' num2str(std3)]); grid on;
 
 figure(4); subplot(325);imshow(Frame_Avrg(250:350,:,:)); title('AVG and TRNSFRM Pic ACROSS WINDOW AREA');
