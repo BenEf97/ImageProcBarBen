@@ -1,4 +1,4 @@
-function [Z] = DistanceCalc(LeftImage,RightImage,f,T)
+function [Z,time] = DistanceCalc(LeftImage,RightImage,f,T)
 %This fucnction calculates the distance of an object from a stereo camera.
 %The function has 4 inputs:
 %LeftImage- The left image, taken before the camera moved.
@@ -24,7 +24,7 @@ imshow(Il);
 title('Select an object by drawing a rectangle');
 %Get the coordinates of the selected rectangle [x, y, width, height]
 rect = getrect;
-
+tic
 %Extract the object from the left image.
 object_Mask = imcrop(Il, rect);
 close (selectObj);
@@ -50,5 +50,6 @@ dispairtyX=original_x1-shifted_x1;
 
 %The distance equation and returning the value.
 Z=(f*T)/dispairtyX;
+time=toc;
 end
 
