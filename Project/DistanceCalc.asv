@@ -9,8 +9,7 @@ function [Z] = DistanceCalc(LeftImage,RightImage,f,T)
 %T- The baseline, the distance between the 2 camera lenses. The user needs
 %to determine this value.
 %
-%The function return Z- The distance of the object from the cameras.
-% Z is calculated by this equation: Z=f*T/(xl-xr)
+%The function
 
 %Getting the left image.
 Il=LeftImage;
